@@ -10,17 +10,17 @@ systemctl start apache2
 
 # Change Directory and copy files from github
 cd /var/www/html/
-# https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/file
-sudo curl -LJO #Link to the file
-sudo curl -LJO #Link to the file
-sudo curl -LJO #Link to the file
-sudo curl -LJO #Link to the file
-sudo curl -LJO #Link to the file
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/index.php
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/script.js
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/style.css
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/temperature.php
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/temppi.py
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/icon3.ico
 systemctl restart apache2
 
 # Make Service for Sensor
 cd /etc/systemd/system/
-sudo curl -LJO #Link to the file
+sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/temperature.service
 systemctl deamon-reload
 systemctl enable temperature
 systemctl start temperature
