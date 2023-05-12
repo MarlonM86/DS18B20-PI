@@ -7,5 +7,5 @@
 
 Hier wird Ihnen gezeigt, wie Sie einen DS18B20-Temperatursensor erfolgreich an einen Raspberry Pi anschließen und Daten verarbeiten.
 
-### Die Installationsanleitung finden Sie in der Dokumentation dieses Projektes:
+### Die Installationsanleitung, sowie diverse Anleitungen finden Sie in der Dokumentation dieses Projektes:
 [Dokumentation](https://github.com/MarlonM86/DS18B20-PI/wiki)
