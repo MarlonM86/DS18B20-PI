@@ -3,7 +3,7 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/MarlonM86/DS18B20-PI/total)
 ![GitHub top language](https://img.shields.io/github/languages/top/MarlonM86/DS18B20-PI)
 
-# DS18B20-Temperaturesensor an einem Raspberry Pi
+# DS18B20-Temperatursensor an einem Raspberry Pi
 
 Hier wird Ihnen gezeigt, wie Sie einen DS18B20-Temperatursensor erfolgreich an einen Raspberry Pi anschließen und Daten verarbeiten.
 
