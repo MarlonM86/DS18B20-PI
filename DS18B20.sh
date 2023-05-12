@@ -27,9 +27,29 @@ systemctl start temperature
 sleep 3
 systemctl stop temperature
 
+function hostname_change() {
+    read -p "Wie soll der neue Hostname lauten?" hostname_new
+    sudo hostnamectl set-hostname $hostname_new
+}
+
+# Change Hostname if wanted
+function hostname(){
+    echo "Möchten Sie den Hostname Ihres Gerätes ändern? (y/n)"
+    read -p "y/n" change_hostname
+}
+case $change_hostname in 
+    y) hostname_change ;;
+    yes) hostname_change ;;
+    ja) hostname_change ;;
+    n) exit ;;
+    no) exit ;;
+    nein) exit ;;
+    *) {echo "Ungültige Eingabe. Bitte erneut versuchen"; hostname}
+
 echo "Installation finished!"
 echo "######################"
-echo "Please check the status of the Webserver with: systemctl status apache2 !"
-echo "Please check the status of the Python-Service with: systemctl status temperature !"
+echo "After the reboot please to this further steps: (Hint: Copy the commands before rebooting)"
+echo " - Please check the status of the Webserver with: systemctl status apache2 !"
+echo " - Please check the status of the Python-Service with: systemctl status temperature !"
 echo "######################"
 echo "Thank you for using our Product!"
