@@ -17,11 +17,11 @@
 		<div class="content">
 			<h2>Startseite</h2>
 			<div>
-				<h2>Aktuelle Temperatur</h2>
+				<h3>Aktuelle Temperatur</h3>
 				<div id="current-temperature"></div>
 			</div>
 			<div>
-				<h2>Letzte 15 Werte</h2>
+				<h3>Letzte 15 Werte</h3>
 				<table id="temperature-table">
 					<thead>
 						<tr>
