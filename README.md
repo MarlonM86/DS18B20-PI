@@ -1,4 +1,4 @@
-![GitHub manifest version](https://img.shields.io/github/manifest-json/v/MarlonM86/DS18B20-PI)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/MarlonM86/DS18B20-PI?include_prereleases)
 
 # DS18B20-Temperaturesensor an einem Raspberry Pi
 
