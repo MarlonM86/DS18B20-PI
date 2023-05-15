@@ -1,4 +1,4 @@
-var chart; // Globale Variable für das Diagramm
+var chart; // Globale Variable f r das Diagramm
 
 function updateTemperature() {
   var xhttp = new XMLHttpRequest();
@@ -29,11 +29,11 @@ function updateTemperatureChart(temperatureArray) {
 
   // Filtere die Daten auf die letzten 2 Stunden
   var now = new Date();
-  now.setHours(now.getHours() - 2);
+  var twoHoursAgo = now.getTime() - (2 * 60 * 60 * 1000);
 
   for (var i = 0; i < temperatureArray.length; i++) {
     var timestamp = new Date(temperatureArray[i].timestamp).getTime();
-    if (timestamp >= now.getTime()) {
+    if (timestamp >= twoHoursAgo) {
       timestamps.push(temperatureArray[i].timestamp);
       temperatures.push(temperatureArray[i].temperature);
     }
@@ -81,8 +81,8 @@ function updateTemperatureChart(temperatureArray) {
   }
 }
 
-// Aktualisiere die Temperatur, die letzten Werte und das Diagramm alle 5 Sekunden
-setInterval(updateTemperature, 2000);
+// Aktualisiere die Temperatur, die letzten Werte und das Diagramm alle 10 Sekunden
+setInterval(updateTemperature, 10000);
 
 // Rufe die updateTemperature-Funktion beim Laden der Seite auf
 window.addEventListener("load", updateTemperature);
