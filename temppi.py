@@ -21,9 +21,9 @@ def main():
         timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         temperature = read_temperature(sensor)
         write_to_csv(filename, timestamp, temperature)
-        print(f'Temperature: {temperature}°C ({timestamp})')
-        # Du kannst hier eine Pause einfügen, um die Abtastrate einzustellen
-        time.sleep(2)
+        print(f'Temperature: {temperature} °C ({timestamp})')
+        # Du kannst hier eine Pause einfÃ¼gen, um die Abtastrate einzustellen
+        time.sleep(10)
 
 if __name__ == '__main__':
     main()
