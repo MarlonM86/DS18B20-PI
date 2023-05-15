@@ -22,7 +22,7 @@ systemctl restart apache2
 # Make Service for Sensor
 cd /etc/systemd/system/
 sudo curl -LJO https://raw.githubusercontent.com/MarlonM86/DS18B20-PI/main/temperature.service
-systemctl deamon-reload
+systemctl daemon-reload
 systemctl enable temperature
 systemctl start temperature
 sleep 3
