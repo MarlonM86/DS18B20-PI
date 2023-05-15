@@ -4,7 +4,8 @@
 sudo apt update && sudo apt upgrade -y
 
 # Install Basics
-sudo apt install curl python3-pip w1thermsensor apache2 php -y
+sudo apt install curl python3-pip apache2 php -y
+pip3 install w1thermsensor
 systemctl enable apache2
 systemctl start apache2
 
